@@ -5,12 +5,10 @@ Just another Java event handler.
 ##### Gradle
 ```
 repositories {
-    ...
     maven { url 'https://jitpack.io' }
 }
 
 dependencies {
-    ...
     implementation 'com.github.olliem5:pace:1.0'
 }
 ```
