@@ -6,16 +6,6 @@ package me.olliem5.pace.modifier;
  */
 
 public enum EventEra {
-    PRE("Pre"),
-    POST("Post");
-
-    private String name;
-
-    EventEra(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return this.name;
-    }
+    PRE,
+    POST
 }

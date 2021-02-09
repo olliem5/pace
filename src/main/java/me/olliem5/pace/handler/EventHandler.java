@@ -44,24 +44,24 @@ public class EventHandler {
     }
 
     public <T extends Event> void dispatchPaceEvent(T event) {
-        if (!event.isCancelled()) {
-            registeredMap.forEach((object, methods) -> registeredMap.get(object).stream()
-                    .filter(method -> method.getParameterTypes()[0] == event.getClass())
-                    .forEach(method -> {
-                        try {
-                            method.invoke(object, event);
-                        } catch (IllegalAccessException | InvocationTargetException exception) {
-                            if (debugLogging) {
-                                Pace.log("Something went wrong when dispatching the pace event '" + event + "' with the era '" + event.getEventEra().getName() + "'.");
-                            }
+        if (event.isCancelled()) return;
 
-                            exception.printStackTrace();
+        registeredMap.forEach((object, methods) -> registeredMap.get(object).stream()
+                .filter(method -> method.getParameterTypes()[0] == event.getClass())
+                .forEach(method -> {
+                    try {
+                        method.invoke(object, event);
+                    } catch (IllegalAccessException | InvocationTargetException exception) {
+                        if (debugLogging) {
+                            Pace.log("Something went wrong when dispatching the pace event '" + event + "' with the era '" + event.getEventEra() + "'.");
                         }
-                    }));
 
-            if (debugLogging) {
-                Pace.log("Finished dispatching '" + event + "' with the era '" + event.getEventEra().getName() + "'!");
-            }
+                        exception.printStackTrace();
+                    }
+                }));
+
+        if (debugLogging) {
+            Pace.log("Finished dispatching '" + event + "' with the era '" + event.getEventEra() + "'!");
         }
     }
 
