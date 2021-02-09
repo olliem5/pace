@@ -9,7 +9,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.olliem5:pace:1.0'
+    implementation 'com.github.olliem5:pace:1.1'
 }
 ```
 
@@ -25,7 +25,7 @@ dependencies {
 <dependency>
 	<groupId>com.github.olliem5</groupId>
 	    <artifactId>pace</artifactId>
-	<version>1.0</version>
+	<version>1.1</version>
 </dependency>
 ```
 
