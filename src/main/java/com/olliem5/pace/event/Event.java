@@ -1,6 +1,6 @@
-package me.olliem5.pace.event;
+package com.olliem5.pace.event;
 
-import me.olliem5.pace.modifier.EventEra;
+import com.olliem5.pace.modifier.EventEra;
 
 /**
  * @author olliem5

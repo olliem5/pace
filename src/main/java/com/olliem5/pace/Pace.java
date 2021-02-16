@@ -1,4 +1,4 @@
-package me.olliem5.pace;
+package com.olliem5.pace;
 
 public class Pace {
     public static final String NAME = "Pace";

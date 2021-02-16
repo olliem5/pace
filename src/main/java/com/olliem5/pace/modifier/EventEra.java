@@ -1,4 +1,4 @@
-package me.olliem5.pace.modifier;
+package com.olliem5.pace.modifier;
 
 /**
  * @author olliem5

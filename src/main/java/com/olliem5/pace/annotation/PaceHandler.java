@@ -1,6 +1,6 @@
-package me.olliem5.pace.annotation;
+package com.olliem5.pace.annotation;
 
-import me.olliem5.pace.modifier.EventPriority;
+import com.olliem5.pace.modifier.EventPriority;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

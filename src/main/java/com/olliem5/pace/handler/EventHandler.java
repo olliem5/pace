@@ -1,8 +1,8 @@
-package me.olliem5.pace.handler;
+package com.olliem5.pace.handler;
 
-import me.olliem5.pace.Pace;
-import me.olliem5.pace.annotation.PaceHandler;
-import me.olliem5.pace.event.Event;
+import com.olliem5.pace.annotation.PaceHandler;
+import com.olliem5.pace.Pace;
+import com.olliem5.pace.event.Event;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
