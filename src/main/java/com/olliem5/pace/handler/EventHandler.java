@@ -45,17 +45,18 @@ public class EventHandler {
     public <T extends Event> void dispatchPaceEvent(T event) {
         if (event.isCancelled()) return;
 
-        registeredMap.forEach((object, methods) -> registeredMap.get(object).stream()
-                .filter(method -> method.getParameterTypes()[0] == event.getClass())
+        registeredMap.forEach((object, methods) -> methods
                 .forEach(method -> {
+                    if (method.getParameterTypes()[0] != event.getClass()) return;
+
                     try {
                         method.invoke(object, event);
-                    } catch (IllegalAccessException | InvocationTargetException exception) {
+                    } catch (IllegalAccessException | InvocationTargetException e) {
                         if (debugLogging) {
                             Pace.log("Something went wrong when dispatching the pace event '" + event + "' with the era '" + event.getEventEra());
                         }
 
-                        exception.printStackTrace();
+                        e.printStackTrace();
                     }
                 })
         );
@@ -66,9 +67,10 @@ public class EventHandler {
     }
 
     public <T> T dispatchEvent(T event) {
-        registeredMap.forEach((object, methods) -> registeredMap.get(object).stream()
-                .filter(method -> method.getParameterTypes()[0] == event.getClass())
+        registeredMap.forEach((object, methods) -> methods
                 .forEach(method -> {
+                    if (method.getParameterTypes()[0] != event.getClass()) return;
+
                     try {
                         method.invoke(object, event);
                     } catch (IllegalAccessException | InvocationTargetException exception) {
