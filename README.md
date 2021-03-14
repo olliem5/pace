@@ -3,7 +3,7 @@ Just another Java event handler.
 
 ### Installation
 ##### Gradle
-```
+```gradle
 repositories {
     maven { url 'https://jitpack.io' }
 }
