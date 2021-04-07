@@ -16,14 +16,14 @@ dependencies {
 ##### Maven
 ```xml
 <repository>
-	    <id>jitpack.io</id>
-	    <url>https://jitpack.io</url>
-	</repository>
+    <id>jitpack.io</id>
+    <url>https://jitpack.io</url>
+</repository>
     
 <dependency>
-	<groupId>com.github.olliem5</groupId>
-	    <artifactId>pace</artifactId>
-	<version>1.3</version>
+    <groupId>com.github.olliem5</groupId>
+	<artifactId>pace</artifactId>
+    <version>1.3</version>
 </dependency>
 ```
 
