@@ -14,7 +14,7 @@ dependencies {
 ```
 
 ##### Maven
-```
+```xml
 <repositories>
 	<repository>
 	    <id>jitpack.io</id>
