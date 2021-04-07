@@ -15,12 +15,10 @@ dependencies {
 
 ##### Maven
 ```xml
-<repositories>
-	<repository>
+<repository>
 	    <id>jitpack.io</id>
 	    <url>https://jitpack.io</url>
 	</repository>
-</repositories>
     
 <dependency>
 	<groupId>com.github.olliem5</groupId>
