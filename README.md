@@ -5,23 +5,23 @@ Just another Java event handler.
 ##### Gradle
 ```gradle
 repositories {
-    maven { url 'https://jitpack.io' }
+    maven { url 'https://beriidevelopment.github.io/mvn/' }
 }
 
 dependencies {
-    implementation 'com.github.olliem5:pace:1.3'
+    implementation 'com.olliem5:pace:1.3'
 }
 ```
 
 ##### Maven
 ```xml
 <repository>
-    <id>jitpack.io</id>
-    <url>https://jitpack.io</url>
+    <id>BeriiDevelopment</id>
+    <url>https://beriidevelopment.github.io/mvn</url>
 </repository>
     
 <dependency>
-    <groupId>com.github.olliem5</groupId>
+    <groupId>com.olliem5</groupId>
 	<artifactId>pace</artifactId>
     <version>1.3</version>
 </dependency>
